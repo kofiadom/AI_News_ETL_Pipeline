@@ -1,0 +1,34 @@
+[2024-09-06T07:32:38.842+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-06T07:32:38.900+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_data_pipeline.extract_data manual__2024-09-06T07:32:35.180791+00:00 [queued]>
+[2024-09-06T07:32:38.909+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_data_pipeline.extract_data manual__2024-09-06T07:32:35.180791+00:00 [queued]>
+[2024-09-06T07:32:38.910+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-09-06T07:32:38.942+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_data> on 2024-09-06 07:32:35.180791+00:00
+[2024-09-06T07:32:38.954+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_data_pipeline', 'extract_data', 'manual__2024-09-06T07:32:35.180791+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/newspipeline.py', '--cfg-path', '/tmp/tmpl4fml6t4']
+[2024-09-06T07:32:38.987+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask extract_data
+[2024-09-06T07:32:38.988+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=373) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-06T07:32:38.989+0000] {standard_task_runner.py:63} INFO - Started process 374 to run task
+[2024-09-06T07:32:39.058+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_data_pipeline.extract_data manual__2024-09-06T07:32:35.180791+00:00 [running]> on host ca47fb49acc7
+[2024-09-06T07:32:39.200+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_data_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-06T07:32:35.180791+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-06T07:32:35.180791+00:00'
+[2024-09-06T07:32:39.200+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-06T07:32:42.566+0000] {logging_mixin.py:188} INFO - Successfully saved 100 articles to ai_news_articles.json and ai_news_articles.csv
+[2024-09-06T07:32:43.217+0000] {python.py:237} INFO - Done. Returned value was:              uri  ...                                              image
+0   b-8309474163  ...  https://www.timeshighereducation.com/unijobs/i...
+1     8309472537  ...  https://images.firstpost.com/uploads/2024/09/A...
+2     8309471445  ...  https://photo-cdn.urdupoint.com/images/UrduPoi...
+3     8309471132  ...  https://www.lowyat.net/wp-content/uploads/2024...
+4   b-8309471261  ...  https://media.fashionnetwork.com/cdn-cgi/image...
+..           ...  ...                                                ...
+95    8309424223  ...  https://www.itweb.co.za/static/pictures/2024/0...
+96    8309425761  ...  https://www.lexology.com/images/share/lexology...
+97    8309425045  ...                                               None
+98    8309425012  ...  https://images.yourstory.com/cs/2/07f6d7f0ed8e...
+99    8309425046  ...                                               None
+
+[100 rows x 9 columns]
+[2024-09-06T07:32:43.248+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-06T07:32:43.498+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_data_pipeline, task_id=extract_data, run_id=manual__2024-09-06T07:32:35.180791+00:00, execution_date=20240906T073235, start_date=20240906T073238, end_date=20240906T073243
+[2024-09-06T07:32:43.535+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-06T07:32:43.560+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-06T07:32:43.562+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
