@@ -1,1 +1,0 @@
-[2024-08-20T23:15:41.388+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: etl_data_pipeline.extract_data manual__2024-08-20T23:13:55.354288+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
